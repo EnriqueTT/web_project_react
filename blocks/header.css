@@ -1,0 +1,40 @@
+.header {
+  min-width: 320px;
+  max-width: 880px;
+  margin: auto;
+  border-bottom: 1px solid #545454;
+  max-height: 74px;
+  color: white;
+  display: flex;
+}
+
+.header__title {
+  margin: 0 5px 41px 0;
+  font-size: 33px;
+  font-weight: 400;
+}
+
+.header__subtitle {
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    max-width: 581px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    max-width: 320px;
+  }
+
+  .header__title {
+    margin-left: 27px;
+    font-size: 24px;
+  }
+
+  .header__subtitle {
+    font-size: 12px;
+  }
+}
