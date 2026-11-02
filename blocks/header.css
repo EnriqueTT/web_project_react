@@ -8,6 +8,10 @@
   display: flex;
 }
 
+.header__logo {
+  margin-bottom: 41px;
+}
+
 .header__title {
   margin: 0 5px 41px 0;
   font-size: 33px;

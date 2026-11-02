@@ -1,18 +1,15 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import logo from "../images/LogoTitle.svg"
 
 function App() {
  
 
   return (
     <>
-    <body class="page">
-    <header class="header">
-      <h1 class="header__title">Around</h1>
-      <p class="header__subtitle">The World.</p>
+    <body class="page page__content">
+    <header class="header page__section">
+      <img src={logo} alt="Logo Around the world" 
+      className='logo header__logo'/>
     </header>
     <main class="content">
       <section class="profile">
