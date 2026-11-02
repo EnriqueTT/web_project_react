@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import logo from "../images/LogoTitle.svg"
+import logo from "./images/LogoTitle.svg"
+import avatar from "./images/Avatar.png"
 
 function App() {
  
@@ -16,7 +17,7 @@ function App() {
         <div class="picture profile__photo">
           <img
             class="profile__picture"
-            src="./images/Avatar.png"
+            src={avatar}
             alt="foto circular de una persona"
           />
           <div class="profile__overlay">✏️</div>
