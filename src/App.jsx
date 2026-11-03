@@ -1,186 +1,24 @@
-import { useState } from 'react'
-import logo from "./images/LogoTitle.svg"
-import avatar from "./images/Avatar.png"
+import Header from "./components/Header/Header.jsx"
+import Main from "./components/Main/Main.jsx"
+import Footer from "./components/Footer/Footer.jsx"
 
 function App() {
- 
 
   return (
     <>
-    <body class="page page__content">
-    <header class="header page__section">
-      <img src={logo} alt="Logo Around the world" 
-      className='logo header__logo'/>
-    </header>
-    <main class="content">
-      <section class="profile">
-        <div class="picture profile__photo">
-          <img
-            class="profile__picture"
-            src={avatar}
-            alt="foto circular de una persona"
-          />
-          <div class="profile__overlay">✏️</div>
-        </div>
-        <div class="info profile__info">
-          <h2 class="info__name">Enrique Tecuapetla</h2>
-          <button class="info__edit-button" type="button"></button>
-          <p class="info__about">Explorador</p>
-        </div>
-        <button class="profile__add-button"></button>
-      </section>
-      <div class="popup">
-        <form class="popup__form form" novalidate>
-          <button class="popup__close-button" type="button"></button>
-          <h2 class="form__title">Editar perfil</h2>
-          <fieldset class="form__fieldset">
-            <label class="form__label">
-              <input
-                class="form__name form__input"
-                id="name"
-                type="text"
-                placeholder="Nombre"
-                name="name"
-                minlength="2"
-                maxlength="40"
-                aria-label="Nombre"
-                required
-              />
-              <span class="form__input-error" id="name__input-error">55</span>
-            </label>
-            <label class="form__label">
-              <input
-                id="about"
-                class="form__about form__input"
-                type="text"
-                placeholder="Acerca de mí"
-                name="about"
-                aria-label="Acerca de mí"
-                minlength="2"
-                maxlength="200"
-                required
-              />
-              <span class="form__input-error" id="about__input-error">3</span>
-            </label>
-            <button class="form__submit-button" type="submit">Guardar</button>
-          </fieldset>
-        </form>
-      </div>
-      <div class="popup_photo popup">
-        <form class="popup__form form photo-form" novalidate>
-          <button class="popup__close-button" type="button"></button>
-          <h2 class="form__title">Cambiar Foto de perfil</h2>
-          <fieldset class="form__fieldset">
-            <label class="form__label">
-              <input
-                class="form__link form__input"
-                type="url"
-                id="link"
-                placeholder="Enlace a la imagen"
-                name="enlace"
-                aria-label="Enlace a la imagen"
-                required
-              />
-              <span class="form__input-error" id="link__input-error"></span>
-            </label>
-            <button class="form__submit-button create-button" type="submit">
-              Guardar
-            </button>
-          </fieldset>
-        </form>
-      </div>
-      <div class="popup_add popup">
-        <form class="popup__form form add-form" novalidate>
-          <button class="popup__close-button" type="button"></button>
-          <h2 class="form__title">Nuevo Lugar</h2>
-          <fieldset class="form__fieldset">
-            <label class="form__label">
-              <input
-                class="form__name form__input"
-                id="title"
-                type="text"
-                placeholder="Título"
-                minlength="2"
-                maxlength="30"
-                name="titulo"
-                aria-label="Título"
-                required
-              />
-              <span class="form__input-error" id="title__input-error"></span>
-            </label>
-            <label class="form__label">
-              <input
-                class="form__link form__input"
-                type="url"
-                id="link"
-                placeholder="Enlace a la imagen"
-                name="enlace"
-                aria-label="Enlace a la imagen"
-                required
-              />
-              <span class="form__input-error" id="link__input-error"></span>
-            </label>
-            <button class="form__submit-button create-button" type="submit">
-              Crear
-            </button>
-          </fieldset>
-        </form>
-      </div>
-      <div class="popup_img popup">
-        <div class="popup__img-div">
-          <button
-            class="popup__close-button popup__close-img"
-            type="button"
-          ></button>
-          <img class="popup__picture" src=" " alt=" " />
-          <p class="popup__description"></p>
-        </div>
-      </div>
-      <div class="popup_confirmation popup">
-        <form class="popup__form form" novalidate>
-          <button
-            class="popup__close-button popup__close-img"
-            type="button"
-          ></button>
-          <h2 class="form__title">Estás seguro/a?</h2>
-
-          <button class="form__submit-button create-button" type="submit">
-            Si
-          </button>
-        </form>
-      </div>
-      <template id="card-template">
-        <div class="card">
-          <img
-            class="card__img-trash"
-            src="images/Trash.svg"
-            alt="Ícono de un bote de basura"
-          />
-          <img class="card__img" src=" " alt=" " />
-          <div class="card__bottom">
-            <p class="card__text"></p>
-            <img
-              class="card__like"
-              src="images/Corazon.svg"
-              alt="Logo de corazon"
-            />
-          </div>
-        </div>
-      </template>
-      <section class="places"></section>
-    </main>
-    <footer class="footer">
-      <p class="footer__text">&#169; 2025 Around The World.</p>
-    </footer>
-    <script type="module" src="./pages/index.js"></script>
-    <script type="module" src="./components/FormValidator.js"></script>
-    <script type="module" src="./components/Section.js"></script>
-    <script type="module" src="./components/Card.js"></script>
-    <script type="module" src="./components/Popup.js"></script>
-    <script type="module" src="./components/PopupWithImage.js"></script>
-    <script type="module" src="./utils/utils.js"></script>
-    <script type="module" src="./utils/constants.js"></script>
-  </body>
+     <body class="page page__content">
+        <Header></Header>
+        <Main></Main>
+        <Footer></Footer>
+          <script type="module" src="./pages/index.js"></script>
+          <script type="module" src="./components/FormValidator.js"></script>
+          <script type="module" src="./components/Section.js"></script>
+          <script type="module" src="./components/Card.js"></script>
+          <script type="module" src="./components/Popup.js"></script>
+          <script type="module" src="./components/PopupWithImage.js"></script>
+          <script type="module" src="./utils/utils.js"></script>
+          <script type="module" src="./utils/constants.js"></script>
+      </body>
     </>
   )
 }
