@@ -4,7 +4,7 @@ export default function Popup(props) {
     return(
         <div className="popup">
             <div className="popup__content">
-                <button className="popup__close-button" type="button"></button>
+                <button aria-label="Close modal" className="popup__close-button" type="button"></button>
                 <h3 className="popup__title">{title}</h3>
                 {children}
             </div>
