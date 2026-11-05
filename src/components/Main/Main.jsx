@@ -119,11 +119,11 @@ const cards = [
       </template>
       
       <section className="places">
-        
+        <ul className="places__list">
         {cards.map((card) => (
           <Card key={card._id} card= {card} />
         ))}
-       
+        </ul>
       </section>
       
     </main>

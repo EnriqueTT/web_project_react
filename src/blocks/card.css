@@ -7,11 +7,15 @@
   position: relative;
 }
 
-.card__img-trash {
+.card__delete-button {
   position: absolute;
   top: 18px;
   right: 15px;
   cursor: pointer;
+  background-image: url("../images/Trash.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card__img {
@@ -41,24 +45,29 @@
   overflow: hidden;
 }
 
-.card__like {
+.card__like-button {
   width: 21px;
   height: 19px;
   cursor: pointer;
+  background-image: url("../images/Corazon.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 }
 
-.card__like:hover {
+.card__like-button:hover {
   opacity: 50%;
 }
 
-.card__like:active {
+.card__like-button:active {
   transform: scale(1.2);
 }
 
-.card__like_black {
+.card__like-button_black {
   background: url("../images/CorazonNegr.svg");
 }
 
-.card__img-trash:hover {
+.card__delete-button:hover {
   opacity: 50%;
 }
