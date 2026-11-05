@@ -4,6 +4,7 @@ import Popup from "./components/Popup";
 import NewCard from "../NewCard/NewCard";
 import EditProfile from "../EditProfile/EditProfile";
 import EditAvatar from "../EditAvatar/EditAvatar";
+import Card from "./components/Card"
 
 function Main() {
   const [popup, setPopup] = useState(null);
@@ -12,10 +13,12 @@ function Main() {
     title: "Nuevo lugar",
     children: <NewCard/>
   };
+
   const editProfilePopup = {
     title: "Editar Perfil",
     children: <EditProfile/>,
   }
+
   const editAvatarPopup = {
     title: "Cambiar Avatar",
     children: <EditAvatar/>,
@@ -30,6 +33,40 @@ function Main() {
     console.log("adios")
     setPopup(null);
   }
+
+const cards = [
+  {
+    isLiked: false,
+    _id: '5d1f0611d321eb4bdcd707dd',
+    name: 'Yosemite Valley',
+    link: 'https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg',
+    owner: '5d1f0611d321eb4bdcd707dd',
+    createdAt: '2019-07-05T08:10:57.741Z',
+  },
+  {
+    isLiked: false,
+    _id: '5d1f064ed321eb4bdcd707de',
+    name: 'Lake Louise',
+    link: 'https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg',
+    owner: '5d1f0611d321eb4bdcd707dd',
+    createdAt: '2019-07-05T08:11:58.324Z',
+  },
+  {
+    isLiked:false,
+    link:"https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/vanoise.jpg",
+    name:"Parque Van",
+    _id: "6a18850852bbb80019652d04",
+    owner: '5d1f0611d321eb4bdcd707dd',
+    createdAt: '2019-07-05T08:10:57.741Z',
+  },{
+    isLiked: false,
+    _id: '5d1f064ed32b4bdcd707de',
+    name: 'Lake Louise',
+    link: 'https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg',
+    owner: '5d1f0611d321eb4bdcd707dd',
+    createdAt: '2019-07-05T08:11:58.324Z',
+  },
+];
 
     return (
     <main className="content">
@@ -62,15 +99,6 @@ function Main() {
         </Popup>
       )}
      
-{/* <div className="popup" >
-            <div className="popup__content">
-                <button aria-label="Close modal" className="popup__close-button" type="button"
-                onClick={() => handleClosePopup}></button>
-                <h3 className="popup__title">{newCardPopup.title}</h3>
-                {newCardPopup.children}
-            </div>
-        </div> */}
-
       <template id="card-template">
         <div className="card">
           <img
@@ -90,10 +118,16 @@ function Main() {
         </div>
       </template>
       
-      <section className="places"></section>
+      <section className="places">
+        
+        {cards.map((card) => (
+          <Card key={card._id} card= {card} />
+        ))}
+       
+      </section>
       
     </main>
-    
     )
 }
+
 export default Main
