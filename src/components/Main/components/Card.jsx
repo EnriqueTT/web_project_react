@@ -1,6 +1,6 @@
 export default function Card(props) {
     const { name, link, isliked } = props.card;
-
+    
     return(
     
         <li className="card">
@@ -9,6 +9,7 @@ export default function Card(props) {
             className="card__delete-button"
             aria-label="Delete card"
             type="button"
+            onClick={props.onDeleteClick}
           />
           <div className="card__bottom">
             <p className="card__text">{name}</p>

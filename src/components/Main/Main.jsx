@@ -5,6 +5,7 @@ import NewCard from "../NewCard/NewCard";
 import EditProfile from "../EditProfile/EditProfile";
 import EditAvatar from "../EditAvatar/EditAvatar";
 import Card from "./components/Card"
+import RemoveCard from "../RemoveCard/RemoveCard";
 
 function Main() {
   const [popup, setPopup] = useState(null);
@@ -22,6 +23,11 @@ function Main() {
   const editAvatarPopup = {
     title: "Cambiar Avatar",
     children: <EditAvatar/>,
+  }
+
+  const deleteCardPopup = {
+    title: "¿Estás seguro/a?",
+    children: <RemoveCard/>,
   }
 
   function handleOpenPopup(popup) {
@@ -121,7 +127,7 @@ const cards = [
       <section className="places">
         <ul className="places__list">
         {cards.map((card) => (
-          <Card key={card._id} card= {card} />
+          <Card key={card._id} card= {card} onDeleteClick={() => {handleOpenPopup(deleteCardPopup)}}/>
         ))}
         </ul>
       </section>
