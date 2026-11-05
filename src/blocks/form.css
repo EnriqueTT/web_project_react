@@ -1,12 +1,4 @@
 .form {
-  position: relative; /*Importante para la posición del botón cerrar*/
-  border-radius: 10px;
-  width: 430px;
-  background-color: #fff;
-  padding: 36px;
-  box-sizing: border-box;
-  color: black;
-  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.149);
 }
 
 .form__fieldset {

@@ -1,6 +1,6 @@
 export default function NewCard() {
     return (
-        <form className="popup__form form add-form" novalidate>
+        <form className="popup__form form add-form" name="card-form" id="new-card-form" noValidate>
           <fieldset className="form__fieldset">
             <label className="form__label">
               <input
@@ -8,8 +8,8 @@ export default function NewCard() {
                 id="title"
                 type="text"
                 placeholder="Título"
-                minlength="2"
-                maxlength="30"
+                minLength="1"
+                maxLength="30"
                 name="titulo"
                 aria-label="Título"
                 required
