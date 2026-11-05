@@ -2,6 +2,8 @@ import { useState } from "react"
 import avatar from "../../images/Avatar.png"
 import Popup from "./components/Popup";
 import NewCard from "../NewCard/NewCard";
+import EditProfile from "../EditProfile/EditProfile";
+import EditAvatar from "../EditAvatar/EditAvatar";
 
 function Main() {
   const [popup, setPopup] = useState(null);
@@ -10,6 +12,14 @@ function Main() {
     title: "Nuevo lugar",
     children: <NewCard/>
   };
+  const editProfilePopup = {
+    title: "Editar Perfil",
+    children: <EditProfile/>,
+  }
+  const editAvatarPopup = {
+    title: "Cambiar Avatar",
+    children: <EditAvatar/>,
+  }
 
   function handleOpenPopup(popup) {
     console.log("holaa")
@@ -29,12 +39,14 @@ function Main() {
             className="profile__picture"
             src={avatar}
             alt="foto circular de una persona"
+            onClick={() => {handleOpenPopup(editAvatarPopup)}}
           />
           <div className="profile__overlay">✏️</div>
         </div>
         <div className="info profile__info">
           <h2 className="info__name">Juanito Perez</h2>
-          <button className="info__edit-button" type="button"></button>
+          <button className="info__edit-button" type="button"
+          onClick={() => handleOpenPopup(editProfilePopup)}></button>
           <p className="info__about">Explorador</p>
         </div>
         <button className="profile__add-button"
@@ -44,7 +56,7 @@ function Main() {
       </section>
 
       {popup && (
-        <Popup className="popup_opened"
+        <Popup 
           onClose={handleClosePopup} title={popup.title} >
           {popup.children}
         </Popup>

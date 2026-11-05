@@ -1,7 +1,7 @@
 export default function EditAvatar(){
 
     return(
-        <form className="popup__form form photo-form" novalidate>
+        <form className="popup__form form photo-form" noValidate>
           <fieldset className="form__fieldset">
             <label className="form__label">
               <input
