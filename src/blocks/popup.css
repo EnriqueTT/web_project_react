@@ -48,7 +48,11 @@
 }
 
 .popup__img-div {
-  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  background-color: transparent;
+  padding: 0px;
+  color: white;
   max-width: 816px;
 }
 
