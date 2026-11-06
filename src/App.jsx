@@ -1,19 +1,15 @@
-import Header from "./components/Header/Header.jsx"
-import Main from "./components/Main/Main.jsx"
-import Footer from "./components/Footer/Footer.jsx"
+import Header from "./components/Header/Header.jsx";
+import Main from "./components/Main/Main.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
-
   return (
-    
-     <body className="page page__content">
-        <Header></Header>
-        <Main></Main>
-        <Footer></Footer>
-          
-      </body>
-  
-  )
+    <div className="page page__content">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
